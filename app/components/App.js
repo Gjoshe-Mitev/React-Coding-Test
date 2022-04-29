@@ -1,20 +1,30 @@
 import '../styles/application.scss';
-import {connect} from '../services';
-import React, {PureComponent} from 'react';
 
-// The below line is here as an example of getting prices
-connect('AAPL');
+import React, { PureComponent } from 'react';
+import { connect as reduxConnect } from 'react-redux';
+
+import { connect, disconnect } from '../services';
+
+import StockTicker from './StockTicker';
 
 class App extends PureComponent {
+    componentDidMount() {
+        this.props.connect('AAPL');
+    }
+
+    componentWillUnmount() {
+        this.props.disconnect();
+    }
+
     render() {
         return (
-            <div className="stock-ticker">
-                <h1>Stock Blotter</h1>
+            <div className="stockTicker">
+                <h1 className="title">Stock Blotter</h1>
 
-
+                <StockTicker />
             </div>
         );
     }
 }
 
-export default App;
+export default reduxConnect(null, { connect, disconnect })(App);

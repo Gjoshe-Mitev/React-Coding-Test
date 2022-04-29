@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StockTicker: checking change value status`] = `
+"<Component store={{...}}>
+  <Provider store={{...}}>
+    <Connect(StockTicker)>
+      <StockTicker ticker={{...}} dispatch={[Function (anonymous)]}>
+        <div className=\\"tickerContainer\\">
+          <h2>
+            Ticker: 
+            AAPL
+          </h2>
+          <h3 className=\\"ticketValueText\\">
+            Price: 
+            127.95
+          </h3>
+          <h3 className=\\"ticketValueText\\">
+            Change Percent: 
+            28.000000000000004
+            %
+          </h3>
+          <span className=\\"statusValueText\\">
+            Change: 
+            137.34
+          </span>
+          <span className=\\"timeIntervalText\\">
+            Interval: 5s
+          </span>
+        </div>
+      </StockTicker>
+    </Connect(StockTicker)>
+  </Provider>
+</Component>"
+`;

@@ -1,8 +1,2 @@
-const stockTicker = (state = {}, action) => {
-    switch (action.type) {
-        default:
-            return state;
-    }
-};
-
-export default stockTicker;
+export * from './stockTicker';
+export { default as stockTicker } from './stockTicker';
